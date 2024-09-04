@@ -1,0 +1,192 @@
+/* Color Palette from Color Hunt */
+:root {
+    --navBg: #2e3a86;
+    --lightFont: #F5EDED;
+    --bodyBg: #7FA1C3;
+    --navLinkHover: #FF8343;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bodyBg);
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    margin: 0 5rem;
+}
+
+nav {
+    background-color: var(--navBg);
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.links ul li a, .logo a {
+    text-decoration: none;
+    color: var(--lightFont);
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: color 0.2s ease-in;
+}
+
+.links ul li a:hover {
+    color: var(--navLinkHover);
+}
+
+.action {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.action a {
+    text-decoration: none;
+    color: var(--lightFont);
+    border: 1px solid var(--lightFont);
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background 0.2s ease-in, border 0.2s ease-in;
+}
+
+.action a:last-child {
+    background-color: var(--lightFont);
+    color: var(--navBg);
+    border: 1px solid var(--navBg);
+}
+
+.action a:first-child:hover {
+    color: var(--navLinkHover);
+    border: 1px solid var(--navLinkHover);
+}
+
+.action a:last-child:hover {
+    background-color: var(--navLinkHover);
+}
+
+.toggleBtn {
+    display: none;
+    color: var(--lightFont);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.toggleMenu {
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+    width: 30vw;
+    background-color: var(--navBg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toggleMenu.active {
+    display: none;
+
+}
+
+.togglelinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.togglelinks ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.togglelinks ul li a {
+    text-decoration: none;
+    color: var(--lightFont);
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.togglelinks ul li a:hover {
+    color: var(--navLinkHover);
+}
+
+.toggleaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.toggleaction a {
+    text-decoration: none;
+    color: var(--lightFont);
+    border: 1px solid var(--lightFont);
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+    margin: 0 5px;
+    text-align: center;
+    transition: background 0.2s ease, border 0.2s ease;
+}
+
+.toggleaction a:last-child {
+    background-color: var(--lightFont);
+    color: var(--navBg);
+    border: 1px solid var(--navBg);
+}
+
+.toggleaction a:first-child:hover {
+    color: var(--navLinkHover);
+    border: 1px solid var(--navLinkHover);
+}
+
+.toggleaction a:last-child:hover {
+    background-color: var(--navLinkHover);
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .links ul {
+        display: none; 
+    }
+
+    .toggleBtn {
+        display: block;
+    }
+    .action{
+        display: none;
+    }
+
+}
